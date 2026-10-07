@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peer Alameen | Senior Laravel Developer &amp; Full-Stack Web Developer</title>
+  <meta name="description" content="Peer Alameen is a Senior Laravel Developer with 5+ years of experience building scalable PHP/Laravel web applications, REST APIs, e-commerce, ERP, kiosk, and business management systems." />
+  <meta name="keywords" content="Senior Laravel Developer, Laravel Full Stack Developer, PHP Developer, Full Stack Developer, Laravel Developer Chennai, Laravel Developer India, Freelance Laravel Developer, REST API Developer, IPROAT Solutions" />
+  <meta name="author" content="Peer Alameen" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --navy-900:#080d1a; --navy-800:#0d1526; --navy-700:#111e33; --navy-600:#172440;
+      --accent-primary:#6366f1; --accent-secondary:#8b5cf6; --accent-tertiary:#06b6d4;
+      --accent-glow:rgba(99,102,241,0.35);
+      --text-primary:#f8faff; --text-secondary:#a8b4cc; --text-muted:#6b7a96;
+      --surface-glass:rgba(255,255,255,0.04); --surface-card:rgba(255,255,255,0.06);
+      --border-subtle:rgba(255,255,255,0.08); --border-accent:rgba(99,102,241,0.4);
+      --shadow-lg:0 20px 60px rgba(0,0,0,0.5); --shadow-glow:0 0 40px rgba(99,102,241,0.25);
+      --radius-sm:8px; --radius-md:14px; --radius-lg:20px; --radius-xl:28px;
+      --transition:all 0.3s cubic-bezier(0.4,0,0.2,1);
+      --font-display:'Outfit',sans-serif; --font-body:'Inter',sans-serif; --font-code:'JetBrains Mono',monospace;
+    }
+    [data-theme="light"] {
+      --navy-900:#f0f4ff; --navy-800:#e8eeff; --navy-700:#dde5f8; --navy-600:#d0d9f0;
+      --accent-primary:#4f46e5; --accent-secondary:#7c3aed; --accent-tertiary:#0891b2;
+      --accent-glow:rgba(79,70,229,0.2);
+      --text-primary:#0f172a; --text-secondary:#334155; --text-muted:#64748b;
+      --surface-glass:rgba(255,255,255,0.7); --surface-card:rgba(255,255,255,0.85);
+      --border-subtle:rgba(0,0,0,0.08); --border-accent:rgba(79,70,229,0.35);
+      --shadow-lg:0 20px 60px rgba(0,0,0,0.12); --shadow-glow:0 0 40px rgba(79,70,229,0.15);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--font-body);background:var(--navy-900);color:var(--text-primary);line-height:1.7;overflow-x:hidden;transition:background .4s,color .4s}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    ul{list-style:none}
+    button{cursor:pointer;border:none;background:none;font-family:inherit}
+    ::-webkit-scrollbar{width:6px}
+    ::-webkit-scrollbar-track{background:var(--navy-800)}
+    ::-webkit-scrollbar-thumb{background:var(--accent-primary);border-radius:3px}
+    h1,h2,h3,h4{font-family:var(--font-display);line-height:1.2}
+    h1{font-size:clamp(2.6rem,6vw,5rem);font-weight:800}
+    h2{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:700}
+    h3{font-size:clamp(1rem,2vw,1.3rem);font-weight:600}
+    p{color:var(--text-secondary)}
+    .container{max-width:1200px;margin:0 auto;padding:0 2rem}
+    .section{padding:100px 0}
+    .section-label{
+      display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-code);
+      font-size:.75rem;font-weight:500;color:var(--accent-primary);letter-spacing:.15em;text-transform:uppercase;
+      background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.25);
+      padding:.4rem 1rem;border-radius:100px;margin-bottom:1.2rem
+    }
+    .section-title{margin-bottom:1rem}
+    .section-title span{color:var(--accent-primary)}
+    .section-desc{max-width:620px;color:var(--text-secondary);font-size:1rem}
+    .section-header{margin-bottom:4rem}
+    .section-header.center{text-align:center}
+    .section-header.center .section-desc{margin:0 auto}
+    .gradient-text{background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary),var(--accent-tertiary));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .badge{display:inline-flex;align-items:center;gap:.4rem;padding:.35rem .9rem;border-radius:100px;font-size:.75rem;font-weight:600;font-family:var(--font-code);background:rgba(99,102,241,.15);color:var(--accent-primary);border:1px solid rgba(99,102,241,.3)}
+    .btn{display:inline-flex;align-items:center;gap:.6rem;padding:.85rem 2rem;border-radius:var(--radius-md);font-family:var(--font-display);font-size:.93rem;font-weight:600;transition:var(--transition);position:relative;overflow:hidden}
+    .btn::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,.08);transform:translateX(-100%);transition:transform .3s ease}
+    .btn:hover::before{transform:translateX(0)}
+    .btn-primary{background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));color:#fff;box-shadow:0 4px 20px var(--accent-glow)}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px var(--accent-glow)}
+    .btn-outline{border:1.5px solid var(--border-accent);color:var(--accent-primary);background:var(--surface-glass);backdrop-filter:blur(10px)}
+    .btn-outline:hover{background:rgba(99,102,241,.12);transform:translateY(-2px)}
+    .btn-ghost{color:var(--text-secondary)}
+    .btn-ghost:hover{color:var(--accent-primary)}
+    .btn-sm{padding:.6rem 1.4rem;font-size:.83rem}
+
+    /* NAV */
+    #navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.2rem 0;transition:all .4s}
+    #navbar.scrolled{background:rgba(8,13,26,.93);backdrop-filter:blur(20px);border-bottom:1px solid var(--border-subtle);padding:.8rem 0;box-shadow:0 4px 30px rgba(0,0,0,.3)}
+    [data-theme="light"] #navbar.scrolled{background:rgba(240,244,255,.93)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{font-family:var(--font-display);font-weight:800;font-size:1.5rem;background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .nav-links{display:flex;align-items:center;gap:.3rem}
+    .nav-links a{padding:.5rem .85rem;border-radius:var(--radius-sm);font-size:.86rem;font-weight:500;color:var(--text-secondary);transition:var(--transition)}
+    .nav-links a:hover,.nav-links a.active{color:var(--accent-primary);background:rgba(99,102,241,.1)}
+    .nav-right{display:flex;align-items:center;gap:1rem}
+    .theme-toggle{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--surface-card);border:1px solid var(--border-subtle);color:var(--text-secondary);font-size:1rem;transition:var(--transition)}
+    .theme-toggle:hover{color:var(--accent-primary);border-color:var(--border-accent)}
+    .hamburger{display:none;width:44px;height:44px;border-radius:var(--radius-sm);align-items:center;justify-content:center;background:var(--surface-card);border:1px solid var(--border-subtle);flex-direction:column;gap:5px}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--text-secondary);border-radius:2px;transition:var(--transition)}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;bottom:0;background:rgba(8,13,26,.97);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;z-index:999}
+    [data-theme="light"] .mobile-menu{background:rgba(240,244,255,.97)}
+    .mobile-menu.open{display:flex}
+    .mobile-menu a{font-family:var(--font-display);font-size:1.4rem;font-weight:600;color:var(--text-primary);transition:var(--transition);padding:.5rem 2rem}
+    .mobile-menu a:hover{color:var(--accent-primary)}
+
+    /* HERO */
+    #hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:80px}
+    .hero-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse at 60% 40%,rgba(99,102,241,.18) 0%,transparent 60%),radial-gradient(ellipse at 20% 80%,rgba(139,92,246,.12) 0%,transparent 50%),radial-gradient(ellipse at 80% 10%,rgba(6,182,212,.08) 0%,transparent 40%)}
+    .hero-grid{position:absolute;inset:0;z-index:0;background-image:linear-gradient(rgba(99,102,241,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(99,102,241,.04) 1px,transparent 1px);background-size:50px 50px}
+    .hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+    .hero-availability{display:inline-flex;align-items:center;gap:.6rem;padding:.5rem 1.2rem;border-radius:100px;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.3);color:#10b981;font-size:.82rem;font-weight:500;font-family:var(--font-code);margin-bottom:1.5rem}
+    .hero-availability::before{content:'';width:8px;height:8px;border-radius:50%;background:#10b981;animation:pulse-dot 2s infinite}
+    @keyframes pulse-dot{0%,100%{box-shadow:0 0 0 0 rgba(16,185,129,.5)}50%{box-shadow:0 0 0 6px rgba(16,185,129,0)}}
+    .hero-name{margin-bottom:.5rem}
+    .hero-title{font-family:var(--font-code);font-size:clamp(.9rem,1.8vw,1.15rem);color:var(--accent-tertiary);margin-bottom:1.5rem;min-height:2rem}
+    .c-keyword{color:#c792ea} .c-fn{color:#82aaff} .c-str{color:#c3e88d} .c-comment{color:var(--text-muted)}
+    .hero-desc{font-size:1.05rem;margin-bottom:2.5rem;max-width:520px}
+    .hero-cta{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3rem}
+    .hero-stats{display:flex;gap:2.5rem;padding-top:2rem;border-top:1px solid var(--border-subtle)}
+    .hero-stat-value{font-family:var(--font-display);font-size:2rem;font-weight:800;background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero-stat-label{font-size:.75rem;color:var(--text-muted);font-weight:500}
+    .hero-visual{display:flex;justify-content:center;align-items:center;position:relative}
+    .hero-img-wrap{width:100%;max-width:460px;border-radius:var(--radius-xl);overflow:hidden;border:1px solid var(--border-accent);box-shadow:0 0 80px rgba(99,102,241,.3),var(--shadow-lg);position:relative}
+    .hero-img-wrap img{width:100%;object-fit:cover}
+    .hero-code-float{position:absolute;bottom:-20px;left:-30px;background:var(--navy-700);border:1px solid var(--border-accent);border-radius:var(--radius-md);padding:1rem 1.2rem;font-family:var(--font-code);font-size:.7rem;line-height:1.9;box-shadow:var(--shadow-lg);animation:float 4s ease-in-out infinite}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+    .hero-tech-badge{position:absolute;top:30px;right:-20px;background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));color:#fff;padding:.8rem 1.2rem;border-radius:var(--radius-md);font-family:var(--font-display);font-size:.83rem;font-weight:700;box-shadow:0 8px 30px var(--accent-glow);animation:float 4s ease-in-out infinite reverse}
+
+    /* ABOUT */
+    .about-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:center}
+    .about-img-box{width:100%;aspect-ratio:3/4;border-radius:var(--radius-xl);background:linear-gradient(135deg,var(--navy-600),var(--navy-700));border:1px solid var(--border-accent);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-glow)}
+    .about-img-box img{width:100%;height:100%;object-fit:cover;border-radius:var(--radius-xl)}
+    .about-img-container{position:relative}
+    .about-card-float{position:absolute;bottom:-20px;right:-20px;background:var(--surface-card);border:1px solid var(--border-accent);border-radius:var(--radius-md);padding:1.2rem 1.5rem;backdrop-filter:blur(20px);box-shadow:var(--shadow-lg)}
+    .about-card-float .acf-label{font-size:.7rem;color:var(--text-muted);font-family:var(--font-code)}
+    .about-card-float .acf-value{font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--accent-primary)}
+    .about-stats-row{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:2rem 0}
+    .about-stat-card{padding:1.2rem;border-radius:var(--radius-md);background:var(--surface-card);border:1px solid var(--border-subtle);text-align:center;transition:var(--transition)}
+    .about-stat-card:hover{border-color:var(--border-accent);transform:translateY(-2px)}
+    .about-stat-card .val{font-family:var(--font-display);font-size:1.3rem;font-weight:800;color:var(--accent-primary)}
+    .about-stat-card .lbl{font-size:.75rem;color:var(--text-muted);margin-top:.2rem}
+    .about-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
+    .about-tag{padding:.3rem .85rem;border-radius:100px;font-size:.77rem;font-weight:500;background:var(--surface-card);border:1px solid var(--border-subtle);color:var(--text-secondary);transition:var(--transition)}
+    .about-tag:hover{border-color:var(--border-accent);color:var(--accent-primary)}
+
+    /* SKILLS */
+    #skills{background:var(--navy-800)}
+    .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.5rem}
+    .skill-category{padding:2rem;border-radius:var(--radius-lg);background:var(--surface-card);border:1px solid var(--border-subtle);transition:var(--transition)}
+    .skill-category:hover{border-color:var(--border-accent);box-shadow:var(--shadow-glow);transform:translateY(-4px)}
+    .skill-cat-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem}
+    .skill-cat-icon{width:46px;height:46px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+    .skill-cat-icon.backend{background:rgba(99,102,241,.15);color:var(--accent-primary)}
+    .skill-cat-icon.frontend{background:rgba(6,182,212,.15);color:var(--accent-tertiary)}
+    .skill-cat-icon.db{background:rgba(245,158,11,.15);color:#f59e0b}
+    .skill-cat-icon.tools{background:rgba(16,185,129,.15);color:#10b981}
+    .skill-cat-icon.server{background:rgba(239,68,68,.15);color:#ef4444}
+    .skill-cat-icon.perf{background:rgba(139,92,246,.15);color:var(--accent-secondary)}
+    .skill-cat-name{font-family:var(--font-display);font-weight:700;font-size:.93rem}
+    .skill-items{display:flex;flex-wrap:wrap;gap:.5rem}
+    .skill-item{display:flex;align-items:center;gap:.4rem;padding:.4rem .85rem;border-radius:100px;font-size:.75rem;font-weight:600;border:1px solid var(--border-subtle);color:var(--text-secondary);background:var(--surface-glass);transition:var(--transition);font-family:var(--font-code)}
+    .skill-item:hover{border-color:var(--border-accent);color:var(--text-primary)}
+    .skill-item.primary{background:rgba(99,102,241,.12);border-color:rgba(99,102,241,.4);color:var(--accent-primary)}
+    .skill-item.strong{background:rgba(6,182,212,.08);border-color:rgba(6,182,212,.3);color:var(--accent-tertiary)}
+
+    /* SERVICES */
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+    .service-card{padding:2rem;border-radius:var(--radius-lg);background:var(--surface-card);border:1px solid var(--border-subtle);transition:var(--transition);position:relative;overflow:hidden}
+    .service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent-primary),var(--accent-secondary));transform:scaleX(0);transform-origin:left;transition:transform .4s}
+    .service-card:hover{border-color:var(--border-accent);transform:translateY(-6px);box-shadow:var(--shadow-glow)}
+    .service-card:hover::before{transform:scaleX(1)}
+    .service-icon{width:52px;height:52px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:1.4rem;background:linear-gradient(135deg,rgba(99,102,241,.15),rgba(139,92,246,.1));color:var(--accent-primary);border:1px solid rgba(99,102,241,.2);transition:var(--transition)}
+    .service-card:hover .service-icon{background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));color:#fff}
+    .service-card h3{font-size:.97rem;margin-bottom:.7rem}
+    .service-card p{font-size:.86rem}
+
+    /* PROJECTS */
+    #projects{background:var(--navy-800)}
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:2rem}
+    .project-card{border-radius:var(--radius-xl);overflow:hidden;background:var(--surface-card);border:1px solid var(--border-subtle);transition:var(--transition)}
+    .project-card:hover{border-color:var(--border-accent);transform:translateY(-6px);box-shadow:var(--shadow-glow)}
+    .project-thumb{height:160px;display:flex;align-items:center;justify-content:center;font-size:3rem;position:relative;overflow:hidden}
+    .pt1{background:linear-gradient(135deg,rgba(99,102,241,.3),rgba(139,92,246,.2))}
+    .pt2{background:linear-gradient(135deg,rgba(6,182,212,.25),rgba(99,102,241,.15))}
+    .pt3{background:linear-gradient(135deg,rgba(245,158,11,.25),rgba(239,68,68,.1))}
+    .pt4{background:linear-gradient(135deg,rgba(16,185,129,.25),rgba(6,182,212,.15))}
+    .pt5{background:linear-gradient(135deg,rgba(139,92,246,.25),rgba(99,102,241,.15))}
+    .pt6{background:linear-gradient(135deg,rgba(239,68,68,.2),rgba(245,158,11,.15))}
+    .project-category{position:absolute;top:1rem;right:1rem;font-size:.67rem;font-weight:600;font-family:var(--font-code);padding:.3rem .8rem;border-radius:100px;background:rgba(0,0,0,.5);color:#fff;backdrop-filter:blur(10px)}
+    .project-client{position:absolute;top:1rem;left:1rem;font-size:.67rem;font-weight:700;font-family:var(--font-code);padding:.3rem .8rem;border-radius:100px;background:rgba(99,102,241,.7);color:#fff;backdrop-filter:blur(10px)}
+    .project-body{padding:1.5rem}
+    .project-body h3{margin-bottom:.6rem;font-size:1rem}
+    .project-body p{font-size:.85rem;margin-bottom:1.1rem}
+    .project-features{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:1rem}
+    .project-feature{font-size:.68rem;padding:.22rem .6rem;border-radius:100px;background:var(--surface-glass);border:1px solid var(--border-subtle);color:var(--text-muted);font-family:var(--font-code)}
+    .project-tech{display:flex;flex-wrap:wrap;gap:.35rem}
+    .project-tech-item{font-size:.68rem;padding:.22rem .6rem;border-radius:100px;background:rgba(99,102,241,.1);border:1px solid rgba(99,102,241,.2);color:var(--accent-primary);font-family:var(--font-code)}
+
+    /* EXPERIENCE */
+    .timeline{position:relative;padding-left:2rem}
+    .timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--accent-primary),var(--accent-secondary),transparent)}
+    .timeline-item{position:relative;margin-bottom:3rem}
+    .timeline-dot{position:absolute;left:-2rem;top:.4rem;width:16px;height:16px;border-radius:50%;background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));border:3px solid var(--navy-900);box-shadow:0 0 12px var(--accent-glow)}
+    .timeline-content{padding:1.8rem 2rem;border-radius:var(--radius-lg);background:var(--surface-card);border:1px solid var(--border-subtle);transition:var(--transition)}
+    .timeline-content:hover{border-color:var(--border-accent)}
+    .timeline-header{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:.5rem;flex-wrap:wrap}
+    .timeline-role{font-family:var(--font-display);font-size:1.05rem;font-weight:700}
+    .timeline-company{color:var(--accent-primary);font-size:.88rem;font-weight:600;margin-bottom:.8rem}
+    .timeline-date{font-family:var(--font-code);font-size:.73rem;padding:.3rem .8rem;border-radius:100px;background:rgba(99,102,241,.1);color:var(--accent-primary);border:1px solid rgba(99,102,241,.2);white-space:nowrap}
+    .timeline-desc{font-size:.87rem;color:var(--text-secondary);margin-bottom:1rem}
+    .timeline-bullets{margin-bottom:1rem}
+    .timeline-bullet{display:flex;align-items:flex-start;gap:.5rem;font-size:.83rem;color:var(--text-secondary);margin-bottom:.35rem}
+    .timeline-bullet i{color:var(--accent-primary);font-size:.65rem;margin-top:.3rem;flex-shrink:0}
+    .timeline-skills{display:flex;flex-wrap:wrap;gap:.4rem}
+    .timeline-skill{font-size:.7rem;padding:.22rem .65rem;border-radius:100px;background:var(--surface-glass);border:1px solid var(--border-subtle);color:var(--text-muted);font-family:var(--font-code)}
+
+    /* EDUCATION */
+    #education{background:var(--navy-800)}
+    .edu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+    .edu-card{padding:2rem;border-radius:var(--radius-lg);background:var(--surface-card);border:1px solid var(--border-subtle);transition:var(--transition);display:flex;gap:1.2rem}
+    .edu-card:hover{border-color:var(--border-accent);transform:translateY(-4px)}
+    .edu-icon{flex-shrink:0;width:50px;height:50px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+    .edu-icon.degree{background:rgba(99,102,241,.15);color:var(--accent-primary)}
+    .edu-icon.cert{background:rgba(16,185,129,.15);color:#10b981}
+    .edu-icon.lang{background:rgba(6,182,212,.15);color:var(--accent-tertiary)}
+    .edu-degree{font-family:var(--font-display);font-size:.93rem;font-weight:700;margin-bottom:.3rem}
+    .edu-institute{color:var(--accent-primary);font-size:.86rem;font-weight:600;margin-bottom:.25rem}
+    .edu-meta{font-size:.76rem;color:var(--text-muted);font-family:var(--font-code)}
+
+    /* PROCESS */
+    .process-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1.5rem}
+    .process-step{text-align:center;padding:2rem 1.2rem;border-radius:var(--radius-lg);background:var(--surface-card);border:1px solid var(--border-subtle);transition:var(--transition)}
+    .process-step:hover{border-color:var(--border-accent);transform:translateY(-4px);box-shadow:var(--shadow-glow)}
+    .process-num{font-family:var(--font-code);font-size:.67rem;font-weight:600;color:var(--accent-primary);margin-bottom:1rem;display:block}
+    .process-icon{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,rgba(99,102,241,.2),rgba(139,92,246,.1));display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--accent-primary);margin:0 auto 1rem;border:1px solid rgba(99,102,241,.2);transition:var(--transition)}
+    .process-step:hover .process-icon{background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));color:#fff;border-color:transparent}
+    .process-step h3{font-size:.88rem;margin-bottom:.5rem}
+    .process-step p{font-size:.78rem}
+
+    /* WHY */
+    .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem}
+    .why-card{padding:2rem;border-radius:var(--radius-lg);background:var(--surface-card);border:1px solid var(--border-subtle);transition:var(--transition)}
+    .why-card:hover{border-color:var(--border-accent);transform:translateY(-4px);box-shadow:var(--shadow-glow)}
+    .why-num{font-family:var(--font-code);font-size:2rem;font-weight:800;color:rgba(99,102,241,.15);line-height:1;margin-bottom:.8rem}
+    .why-card h3{font-size:.93rem;margin-bottom:.5rem}
+    .why-card p{font-size:.84rem}
+
+    /* RESUME CTA */
+    #resume-cta{padding:80px 0;background:linear-gradient(135deg,rgba(99,102,241,.12) 0%,rgba(139,92,246,.08) 50%,rgba(6,182,212,.06) 100%);border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle)}
+    .resume-inner{display:flex;align-items:center;justify-content:space-between;gap:3rem;flex-wrap:wrap}
+    .resume-text h2{margin-bottom:.8rem}
+    .resume-text p{font-size:1rem;max-width:500px}
+    .resume-cta-btns{display:flex;gap:1rem;flex-wrap:wrap;flex-shrink:0}
+
+    /* CONTACT */
+    .contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:4rem}
+    .contact-info{display:flex;flex-direction:column;gap:1.2rem}
+    .contact-info-item{display:flex;align-items:flex-start;gap:1rem;padding:1.4rem;border-radius:var(--radius-md);background:var(--surface-card);border:1px solid var(--border-subtle);transition:var(--transition)}
+    .contact-info-item:hover{border-color:var(--border-accent)}
+    .contact-info-icon{width:44px;height:44px;border-radius:var(--radius-sm);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1rem;background:rgba(99,102,241,.15);color:var(--accent-primary)}
+    .contact-info-label{font-size:.7rem;color:var(--text-muted);font-family:var(--font-code)}
+    .contact-info-value{font-weight:600;font-size:.9rem;color:var(--text-primary)}
+    .contact-form{padding:2.5rem;border-radius:var(--radius-xl);background:var(--surface-card);border:1px solid var(--border-subtle)}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .form-group{margin-bottom:1.2rem}
+    .form-group label{display:block;font-size:.78rem;font-weight:600;color:var(--text-secondary);margin-bottom:.5rem;font-family:var(--font-code)}
+    .form-group input,.form-group select,.form-group textarea{width:100%;padding:.85rem 1.1rem;border-radius:var(--radius-sm);background:var(--navy-700);border:1px solid var(--border-subtle);color:var(--text-primary);font-family:var(--font-body);font-size:.87rem;transition:var(--transition);outline:none}
+    [data-theme="light"] .form-group input,[data-theme="light"] .form-group select,[data-theme="light"] .form-group textarea{background:var(--navy-800)}
+    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent-primary);box-shadow:0 0 0 3px rgba(99,102,241,.15)}
+    .form-group textarea{min-height:110px;resize:vertical}
+    .form-group select option{background:var(--navy-700)}
+    .form-success{display:none;padding:1rem 1.5rem;border-radius:var(--radius-sm);margin-top:1rem;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.3);color:#10b981;font-size:.87rem;text-align:center}
+
+    /* FOOTER */
+    footer{background:var(--navy-800);border-top:1px solid var(--border-subtle);padding:4rem 0 2rem}
+    .footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+    .footer-brand p{font-size:.86rem;margin:.8rem 0 1.2rem;max-width:300px}
+    .footer-col h4{font-family:var(--font-display);font-weight:700;font-size:.87rem;margin-bottom:1.2rem}
+    .footer-col ul{display:flex;flex-direction:column;gap:.6rem}
+    .footer-col ul a{font-size:.83rem;color:var(--text-secondary);transition:var(--transition)}
+    .footer-col ul a:hover{color:var(--accent-primary)}
+    .footer-bottom{padding-top:2rem;border-top:1px solid var(--border-subtle);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+    .footer-copy,.footer-love{font-size:.81rem;color:var(--text-muted)}
+    .footer-love span{color:#ef4444}
+
+    /* ANIMATIONS */
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .reveal-left{opacity:0;transform:translateX(-30px);transition:opacity .7s ease,transform .7s ease}
+    .reveal-left.visible{opacity:1;transform:translateX(0)}
+    .reveal-right{opacity:0;transform:translateX(30px);transition:opacity .7s ease,transform .7s ease}
+    .reveal-right.visible{opacity:1;transform:translateX(0)}
+
+    /* BACK TO TOP */
+    #back-top{position:fixed;bottom:2rem;right:2rem;z-index:900;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));color:#fff;font-size:1rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px var(--accent-glow);opacity:0;pointer-events:none;transition:var(--transition);cursor:pointer}
+    #back-top.show{opacity:1;pointer-events:all}
+    #back-top:hover{transform:translateY(-3px)}
+    .section-divider{height:1px;background:linear-gradient(to right,transparent,var(--border-subtle),transparent)}
+
+    /* RESPONSIVE */
+    @media(max-width:1024px){
+      .hero-inner{grid-template-columns:1fr}
+      .hero-visual{display:none}
+      .about-grid{grid-template-columns:1fr}
+      .about-img-container{max-width:280px;margin:0 auto}
+      .contact-grid{grid-template-columns:1fr}
+      .footer-top{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:768px){
+      .section{padding:70px 0}
+      .nav-links,.nav-right .btn{display:none}
+      .hamburger{display:flex}
+      .hero-cta{flex-direction:column}
+      .hero-cta .btn{justify-content:center}
+      .hero-stats{gap:1.5rem}
+      .form-row{grid-template-columns:1fr}
+      .resume-inner{flex-direction:column;align-items:flex-start}
+      .footer-top{grid-template-columns:1fr}
+      .process-grid{grid-template-columns:repeat(2,1fr)}
+      .projects-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:480px){
+      h1{font-size:2.2rem}
+      .about-stats-row{grid-template-columns:1fr 1fr}
+      .process-grid{grid-template-columns:1fr}
+      .footer-bottom{flex-direction:column;text-align:center}
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════ NAVBAR ═══ -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">Alameen</a>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="https://github.com/Ameen9598/ameenportfolio" target="_blank" rel="noopener noreferrer" class="theme-toggle" aria-label="GitHub Repository" title="GitHub Repository">
+          <i class="fab fa-github"></i>
+        </a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-sun" id="themeIcon"></i>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm">Hire Me</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#hero" class="mobile-link">Home</a>
+  <a href="#about" class="mobile-link">About</a>
+  <a href="#skills" class="mobile-link">Skills</a>
+  <a href="#services" class="mobile-link">Services</a>
+  <a href="#projects" class="mobile-link">Projects</a>
+  <a href="#experience" class="mobile-link">Experience</a>
+  <a href="#education" class="mobile-link">Education</a>
+  <a href="#contact" class="mobile-link">Contact</a>
+  <a href="#contact" class="btn btn-primary" style="margin-top:1rem;">Hire Me</a>
+</div>
+
+<!-- ═══════════════════════════════════════ HERO ═══ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-availability">Open to Full-Time &amp; Freelance Projects</div>
+        <h1 class="hero-name">
+          Peer <span class="gradient-text">Alameen</span>
+        </h1>
+        <p class="hero-title">
+          <span class="c-comment">// </span><span id="typed-title">Senior Laravel Developer</span>
+        </p>
+        <p class="hero-desc">
+          Senior Laravel Developer with <strong style="color:var(--text-primary);">5+ years</strong> of professional PHP/Laravel
+          experience building scalable business applications — payment systems, e-commerce, ERP, school management,
+          visitor management, and more.
+        </p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary"><i class="fas fa-rocket"></i> Hire Me</a>
+          <a href="#projects" class="btn btn-outline"><i class="fas fa-folder-open"></i> View My Work</a>
+          <a href="#resume-cta" class="btn btn-ghost"><i class="fas fa-download"></i> Resume</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-value">5.10+</div>
+            <div class="hero-stat-label">Yrs PHP/Laravel</div>
+          </div>
+          <div>
+            <div class="hero-stat-value">6</div>
+            <div class="hero-stat-label">Real Projects</div>
+          </div>
+          <div>
+            <div class="hero-stat-value">Laravel</div>
+            <div class="hero-stat-label">Primary Stack</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-img-wrap">
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80" alt="Developer workspace" loading="lazy" />
+          <div class="hero-tech-badge"><i class="fab fa-laravel"></i>&nbsp; Senior Laravel Dev</div>
+        </div>
+        <div class="hero-code-float">
+          <div><span class="c-keyword">class</span> <span class="c-fn">AlameeenDev</span> {</div>
+          <div>&nbsp;&nbsp;<span class="c-comment">// 5yr 10m Laravel</span></div>
+          <div>&nbsp;&nbsp;<span class="c-keyword">public function</span> <span class="c-fn">build</span>()</div>
+          <div>&nbsp;&nbsp;{</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-keyword">return</span> <span class="c-str">'scalable apps'</span>;</div>
+          <div>&nbsp;&nbsp;}</div>
+          <div>}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════ ABOUT ═══ -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-container reveal-left">
+        <div class="about-img-box">
+          <img src="profile.jpeg" alt="Peer Alameen" />
+        </div>
+        <div class="about-card-float">
+          <div class="acf-label">// Status</div>
+          <div class="acf-value">&#9679; Available for Work</div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <div class="section-label"><i class="fas fa-user"></i> About Me</div>
+        <h2 class="section-title">Senior Laravel Developer.<br/><span>Full-Stack Problem Solver.</span></h2>
+        <p style="margin-bottom:1rem;">
+          I am <strong>Peer Alameen</strong>, a Senior Laravel Developer with
+          <strong>5 years 10 months of professional PHP/Laravel experience</strong> and
+          6 years 10 months of total professional experience. I specialize in backend and
+          full-stack feature development using PHP, Laravel, MySQL, REST APIs, Livewire,
+          JavaScript, jQuery, AJAX, and Bootstrap.
+        </p>
+        <p style="margin-bottom:1rem;">
+          I have built business-critical applications across EMI/payment &amp; kiosk management,
+          e-commerce, employee management, attendance &amp; payroll, visitor management, school
+          management, and billing systems — working with clients in India and Oman.
+        </p>
+        <p>
+          I bring strong expertise in third-party and hardware integrations, database optimization,
+          authentication &amp; authorization, troubleshooting, production support, and
+          requirement-driven application development.
+        </p>
+        <div class="about-stats-row">
+          <div class="about-stat-card"><div class="val">5.10+</div><div class="lbl">Yrs PHP/Laravel</div></div>
+          <div class="about-stat-card"><div class="val">Senior</div><div class="lbl">Laravel Developer</div></div>
+          <div class="about-stat-card"><div class="val">Full-Stack</div><div class="lbl">Development</div></div>
+          <div class="about-stat-card"><div class="val">IN &amp; OM</div><div class="lbl">India &amp; Oman Projects</div></div>
+        </div>
+        <div class="about-tags">
+          <span class="about-tag">Laravel</span>
+          <span class="about-tag">PHP</span>
+          <span class="about-tag">MySQL</span>
+          <span class="about-tag">REST APIs</span>
+          <span class="about-tag">Livewire</span>
+          <span class="about-tag">JavaScript</span>
+          <span class="about-tag">AJAX</span>
+          <span class="about-tag">Bootstrap</span>
+          <span class="about-tag">Git</span>
+          <span class="about-tag">Linux</span>
+        </div>
+        <div style="display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap;">
+          <a href="#contact" class="btn btn-primary"><i class="fas fa-envelope"></i> Hire Me</a>
+          <a href="#projects" class="btn btn-outline"><i class="fas fa-eye"></i> My Projects</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════ SKILLS ═══ -->
+<section id="skills" class="section">
+  <div class="container">
+    <div class="section-header center">
+      <div class="reveal">
+        <div class="section-label"><i class="fas fa-code"></i> Tech Stack</div>
+        <h2 class="section-title">Skills &amp; <span>Technologies</span></h2>
+        <p class="section-desc">A deep, production-proven skill set covering backend, frontend, databases, APIs, DevOps, and performance.</p>
+      </div>
+    </div>
+    <div class="skills-grid">
+      <!-- Backend -->
+      <div class="skill-category reveal">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon backend"><i class="fas fa-server"></i></div>
+          <div>
+            <div class="skill-cat-name">Backend Development</div>
+            <div style="font-size:.7rem;color:var(--text-muted);font-family:var(--font-code);">★ Primary Focus</div>
+          </div>
+        </div>
+        <div class="skill-items">
+          <span class="skill-item primary"><i class="fab fa-laravel"></i> Laravel</span>
+          <span class="skill-item primary"><i class="fab fa-php"></i> PHP</span>
+          <span class="skill-item strong">MVC Pattern</span>
+          <span class="skill-item strong">Service/Repository Pattern</span>
+          <span class="skill-item primary">REST APIs</span>
+          <span class="skill-item strong">Eloquent ORM</span>
+          <span class="skill-item">Authentication &amp; Auth</span>
+          <span class="skill-item">Middleware</span>
+          <span class="skill-item">Validation</span>
+          <span class="skill-item">Livewire</span>
+          <span class="skill-item">Queues &amp; Jobs</span>
+          <span class="skill-item">Cron Jobs</span>
+        </div>
+      </div>
+      <!-- Frontend -->
+      <div class="skill-category reveal">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon frontend"><i class="fas fa-palette"></i></div>
+          <div>
+            <div class="skill-cat-name">Frontend Development</div>
+            <div style="font-size:.7rem;color:var(--text-muted);font-family:var(--font-code);">Strong Knowledge</div>
+          </div>
+        </div>
+        <div class="skill-items">
+          <span class="skill-item strong"><i class="fab fa-html5"></i> HTML5</span>
+          <span class="skill-item strong"><i class="fab fa-css3-alt"></i> CSS3</span>
+          <span class="skill-item strong"><i class="fab fa-js"></i> JavaScript</span>
+          <span class="skill-item strong">jQuery</span>
+          <span class="skill-item strong">AJAX</span>
+          <span class="skill-item"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+          <span class="skill-item">Blade Templates</span>
+        </div>
+      </div>
+      <!-- Database -->
+      <div class="skill-category reveal">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon db"><i class="fas fa-database"></i></div>
+          <div>
+            <div class="skill-cat-name">Database</div>
+            <div style="font-size:.7rem;color:var(--text-muted);font-family:var(--font-code);">Strong Knowledge</div>
+          </div>
+        </div>
+        <div class="skill-items">
+          <span class="skill-item primary">MySQL</span>
+          <span class="skill-item strong">Database Design</span>
+          <span class="skill-item">Joins &amp; Subqueries</span>
+          <span class="skill-item">Relationships</span>
+          <span class="skill-item">Transactions</span>
+          <span class="skill-item">Indexing</span>
+          <span class="skill-item">Query Optimization</span>
+          <span class="skill-item">Constraints</span>
+        </div>
+      </div>
+      <!-- API & Integration -->
+      <div class="skill-category reveal">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon server"><i class="fas fa-plug"></i></div>
+          <div>
+            <div class="skill-cat-name">API &amp; Integration</div>
+            <div style="font-size:.7rem;color:var(--text-muted);font-family:var(--font-code);">Strong Knowledge</div>
+          </div>
+        </div>
+        <div class="skill-items">
+          <span class="skill-item primary">REST API Integration</span>
+          <span class="skill-item strong">Laravel HTTP Client</span>
+          <span class="skill-item strong">Guzzle</span>
+          <span class="skill-item">API Authentication</span>
+          <span class="skill-item">Headers &amp; Tokens</span>
+          <span class="skill-item">External System Integration</span>
+          <span class="skill-item">Hardware Integration</span>
+          <span class="skill-item">Payment APIs</span>
+          <span class="skill-item">Biometric APIs</span>
+          <span class="skill-item">ERP Integration (SAP &amp; Oracle)</span>
+        </div>
+      </div>
+      <!-- Dev Tools -->
+      <div class="skill-category reveal">
+        <div class="skill-cat-icon tools"><i class="fas fa-tools"></i></div>
+        <div style="margin-bottom:1.2rem">
+          <div class="skill-cat-name" style="margin-top:-.5rem">Dev Tools &amp; Workflow</div>
+          <div style="font-size:.7rem;color:var(--text-muted);font-family:var(--font-code);">Working Knowledge</div>
+        </div>
+        <div class="skill-items">
+          <span class="skill-item strong"><i class="fab fa-git-alt"></i> Git</span>
+          <span class="skill-item strong"><i class="fab fa-github"></i> GitHub</span>
+          <span class="skill-item">GitLab</span>
+          <span class="skill-item">Composer</span>
+          <span class="skill-item">NPM</span>
+          <span class="skill-item">Postman</span>
+        </div>
+      </div>
+      <!-- Performance & Server -->
+      <div class="skill-category reveal">
+        <div class="skill-cat-icon perf"><i class="fas fa-tachometer-alt"></i></div>
+        <div style="margin-bottom:1.2rem">
+          <div class="skill-cat-name" style="margin-top:-.5rem">Performance &amp; Server</div>
+          <div style="font-size:.7rem;color:var(--text-muted);font-family:var(--font-code);">Working Knowledge</div>
+        </div>
+        <div class="skill-items">
+          <span class="skill-item">Eager Loading</span>
+          <span class="skill-item">Pagination</span>
+          <span class="skill-item">Caching</span>
+          <span class="skill-item">Chunking</span>
+          <span class="skill-item">Linux</span>
+          <span class="skill-item">Apache / Nginx</span>
+          <span class="skill-item">Environment Config</span>
+          <span class="skill-item">Queues</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════ SERVICES ═══ -->
+<section id="services" class="section" style="background:var(--navy-800);">
+  <div class="container">
+    <div class="section-header center">
+      <div class="reveal">
+        <div class="section-label"><i class="fas fa-briefcase"></i> What I Offer</div>
+        <h2 class="section-title">My <span>Services</span></h2>
+        <p class="section-desc">Available for freelance development and full-time employment. I build practical solutions around your real business requirements.</p>
+      </div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fab fa-laravel"></i></div>
+        <h3>Laravel Application Development</h3>
+        <p>Build secure, scalable Laravel applications — from small business tools to enterprise-grade systems with complex workflows.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-exchange-alt"></i></div>
+        <h3>REST API Development &amp; Integration</h3>
+        <p>Design and integrate RESTful APIs, third-party services, payment gateways, biometric systems, and external ERPs.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-building"></i></div>
+        <h3>Business Management Software</h3>
+        <p>Attendance, payroll, HR, billing, school management, canteen management, and custom operational workflows.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-shopping-cart"></i></div>
+        <h3>E-Commerce Development</h3>
+        <p>Full-featured e-commerce platforms with product catalog, cart, checkout, order management, and payment integration.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-database"></i></div>
+        <h3>Database Design &amp; Optimization</h3>
+        <p>MySQL schema design, query optimization, indexing, transactions, and data synchronization for high-performance applications.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-wrench"></i></div>
+        <h3>Maintenance &amp; Production Support</h3>
+        <p>Troubleshoot, debug, optimize, and enhance existing Laravel/PHP applications. Production environment support and feature additions.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:3rem;" class="reveal">
+      <p style="margin-bottom:1.5rem;font-size:.87rem;color:var(--text-muted);">Available for remote freelance projects and full-time opportunities worldwide.</p>
+      <a href="#contact" class="btn btn-primary"><i class="fas fa-rocket"></i> Start a Project</a>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════ PROJECTS ═══ -->
+<section id="projects" class="section">
+  <div class="container">
+    <div class="section-header center">
+      <div class="reveal">
+        <div class="section-label"><i class="fas fa-folder-open"></i> Portfolio</div>
+        <h2 class="section-title">Real <span>Projects</span></h2>
+        <p class="section-desc">Production applications I have developed for businesses in India and Oman — each solving real operational problems.</p>
+      </div>
+    </div>
+    <div class="projects-grid">
+
+      <!-- 1. EMI & Kiosk -->
+      <article class="project-card reveal">
+        <div class="project-thumb pt1">
+          <span>&#128179;</span>
+          <span class="project-client">United Finance Corporation</span>
+          <span class="project-category">Payment &amp; Kiosk</span>
+        </div>
+        <div class="project-body">
+          <h3>EMI Payment &amp; Kiosk Management</h3>
+          <p>EMI payment management system integrated with kiosk machines, covering customer and EMI information, kiosk-based transactions, and data synchronization.</p>
+          <div class="project-features">
+            <span class="project-feature">EMI Management</span>
+            <span class="project-feature">Kiosk Integration</span>
+            <span class="project-feature">Payment Workflows</span>
+            <span class="project-feature">Transaction APIs</span>
+            <span class="project-feature">Data Sync</span>
+          </div>
+          <div class="project-tech">
+            <span class="project-tech-item">Laravel</span>
+            <span class="project-tech-item">PHP</span>
+            <span class="project-tech-item">MySQL</span>
+            <span class="project-tech-item">REST APIs</span>
+            <span class="project-tech-item">JavaScript</span>
+            <span class="project-tech-item">AJAX</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. Visitor Management -->
+      <article class="project-card reveal">
+        <div class="project-thumb pt2">
+          <span>&#128101;</span>
+          <span class="project-client">Shell Oman</span>
+          <span class="project-category">Visitor Management</span>
+        </div>
+        <div class="project-body">
+          <h3>Visitor Management System</h3>
+          <p>A visitor management system for entry/exit tracking, visitor registration, record management, and organizational workflow compliance for Shell Oman.</p>
+          <div class="project-features">
+            <span class="project-feature">Visitor Registration</span>
+            <span class="project-feature">Entry/Exit Tracking</span>
+            <span class="project-feature">Record Management</span>
+            <span class="project-feature">Organizational Workflows</span>
+          </div>
+          <div class="project-tech">
+            <span class="project-tech-item">Laravel</span>
+            <span class="project-tech-item">PHP</span>
+            <span class="project-tech-item">MySQL</span>
+            <span class="project-tech-item">JavaScript</span>
+            <span class="project-tech-item">Bootstrap</span>
+            <span class="project-tech-item">AJAX</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. E-Commerce -->
+      <article class="project-card reveal">
+        <div class="project-thumb pt3">
+          <span>&#128664;</span>
+          <span class="project-client">MotoGuide</span>
+          <span class="project-category">E-Commerce</span>
+        </div>
+        <div class="project-body">
+          <h3>Vehicle Accessories &amp; Spares E-Commerce</h3>
+          <p>Full-featured e-commerce platform for vehicle accessories and spares — product catalog, cart, checkout, order management, and customer purchasing workflows.</p>
+          <div class="project-features">
+            <span class="project-feature">Product Catalog</span>
+            <span class="project-feature">Cart &amp; Checkout</span>
+            <span class="project-feature">Order Management</span>
+            <span class="project-feature">Customer Management</span>
+          </div>
+          <div class="project-tech">
+            <span class="project-tech-item">Laravel</span>
+            <span class="project-tech-item">PHP</span>
+            <span class="project-tech-item">MySQL</span>
+            <span class="project-tech-item">JavaScript</span>
+            <span class="project-tech-item">Bootstrap</span>
+            <span class="project-tech-item">REST APIs</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4. HRM -->
+      <article class="project-card reveal">
+        <div class="project-thumb pt4">
+          <span>&#128188;</span>
+          <span class="project-client">Pro-People</span>
+          <span class="project-category">HRM / ERP</span>
+        </div>
+        <div class="project-body">
+          <h3>Human Resource Management System</h3>
+          <p>Employee management covering information, attendance tracking, payroll, biometric integration, and SAP/Oracle ERP system integration for India and Oman.</p>
+          <div class="project-features">
+            <span class="project-feature">Employee Management</span>
+            <span class="project-feature">Attendance &amp; Payroll</span>
+            <span class="project-feature">Biometric Integration</span>
+            <span class="project-feature">SAP &amp; Oracle Integration</span>
+            <span class="project-feature">Data Sync (IN &amp; OM)</span>
+          </div>
+          <div class="project-tech">
+            <span class="project-tech-item">Laravel</span>
+            <span class="project-tech-item">PHP</span>
+            <span class="project-tech-item">MySQL</span>
+            <span class="project-tech-item">REST APIs</span>
+            <span class="project-tech-item">Guzzle</span>
+            <span class="project-tech-item">AJAX</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5. School Management -->
+      <article class="project-card reveal">
+        <div class="project-thumb pt5">
+          <span>&#127979;</span>
+          <span class="project-client">Pro-School</span>
+          <span class="project-category">School Management</span>
+        </div>
+        <div class="project-body">
+          <h3>School Management System</h3>
+          <p>Day-to-day school administrative system with student and employee management, biometric attendance, data synchronization, and application enhancements.</p>
+          <div class="project-features">
+            <span class="project-feature">Student Management</span>
+            <span class="project-feature">Employee Management</span>
+            <span class="project-feature">Biometric Attendance</span>
+            <span class="project-feature">Data Synchronization</span>
+            <span class="project-feature">Admin Dashboard</span>
+          </div>
+          <div class="project-tech">
+            <span class="project-tech-item">Laravel</span>
+            <span class="project-tech-item">PHP</span>
+            <span class="project-tech-item">MySQL</span>
+            <span class="project-tech-item">JavaScript</span>
+            <span class="project-tech-item">Bootstrap</span>
+            <span class="project-tech-item">AJAX</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6. Canteen -->
+      <article class="project-card reveal">
+        <div class="project-thumb pt6">
+          <span>&#127869;&#65039;</span>
+          <span class="project-category">Canteen Management</span>
+        </div>
+        <div class="project-body">
+          <h3>Canteen Management System</h3>
+          <p>Canteen management with billing system integrated with billing machines, biometric devices, and printing machines — daily canteen transaction workflows.</p>
+          <div class="project-features">
+            <span class="project-feature">Billing System</span>
+            <span class="project-feature">Biometric Integration</span>
+            <span class="project-feature">Printing Integration</span>
+            <span class="project-feature">Attendance/Access Control</span>
+            <span class="project-feature">Hardware Integration</span>
+          </div>
+          <div class="project-tech">
+            <span class="project-tech-item">Laravel</span>
+            <span class="project-tech-item">PHP</span>
+            <span class="project-tech-item">MySQL</span>
+            <span class="project-tech-item">JavaScript</span>
+            <span class="project-tech-item">Bootstrap</span>
+            <span class="project-tech-item">Hardware APIs</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════ EXPERIENCE ═══ -->
+<section id="experience" class="section" style="background:var(--navy-800);">
+  <div class="container">
+    <div class="section-header">
+      <div class="reveal">
+        <div class="section-label"><i class="fas fa-history"></i> Career</div>
+        <h2 class="section-title">Work <span>Experience</span></h2>
+        <p class="section-desc">6+ years of total professional experience — 5 years 10 months in PHP/Laravel development.</p>
+      </div>
+    </div>
+    <div class="timeline reveal">
+
+      <!-- Current: Senior Laravel Developer -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <div class="timeline-role">Senior Laravel Developer</div>
+            <span class="timeline-date">&#128197; 2024 &ndash; Present</span>
+          </div>
+          <div class="timeline-company"><i class="fas fa-building" style="margin-right:.4rem;"></i>IPROAT Solutions &mdash; Chennai, Tamil Nadu, India</div>
+          <div class="timeline-bullets">
+            <div class="timeline-bullet"><i class="fas fa-check-circle"></i><span>Develop and maintain scalable PHP/Laravel business applications across payment, HR, education, visitor management, and operational domains.</span></div>
+            <div class="timeline-bullet"><i class="fas fa-check-circle"></i><span>Analyze business requirements and independently develop end-to-end features covering backend logic, database operations, APIs, and frontend functionality.</span></div>
+            <div class="timeline-bullet"><i class="fas fa-check-circle"></i><span>Design and maintain REST APIs and integrate external systems using Laravel HTTP Client and Guzzle.</span></div>
+            <div class="timeline-bullet"><i class="fas fa-check-circle"></i><span>Develop applications using MVC and Service/Repository patterns, reusable business logic, middleware, authentication, and role-based access control.</span></div>
+            <div class="timeline-bullet"><i class="fas fa-check-circle"></i><span>Build interactive features using Livewire, JavaScript, jQuery, AJAX, Bootstrap, and Blade.</span></div>
+            <div class="timeline-bullet"><i class="fas fa-check-circle"></i><span>Integrate applications with payment status systems, kiosk machines, biometric devices, and billing machines using APIs and data synchronization.</span></div>
+          </div>
+          <div class="timeline-skills">
+            <span class="timeline-skill">Laravel</span><span class="timeline-skill">PHP</span>
+            <span class="timeline-skill">MySQL</span><span class="timeline-skill">REST APIs</span>
+            <span class="timeline-skill">Livewire</span><span class="timeline-skill">Guzzle</span>
+            <span class="timeline-skill">JavaScript</span><span class="timeline-skill">jQuery</span>
+            <span class="timeline-skill">AJAX</span><span class="timeline-skill">Bootstrap</span>
+            <span class="timeline-skill">Git</span><span class="timeline-skill">Linux</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHP/Laravel Developer -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <div class="timeline-role">PHP / Laravel Developer</div>
+            <span class="timeline-date">&#128197; Jan 2021 &ndash; 2024</span>
+          </div>
+          <div class="timeline-company"><i class="fas fa-building" style="margin-right:.4rem;"></i>IPROAT Solutions &mdash; Chennai, Tamil Nadu, India</div>
+          <div class="timeline-bullets">
+            <div class="timeline-bullet"><i class="fas fa-check-circle"></i><span>Built and maintained PHP/Laravel web applications for e-commerce, school management, canteen management, and HRM systems.</span></div>
+            <div class="timeline-bullet"><i class="fas fa-check-circle"></i><span>Designed and maintained REST APIs; integrated external systems including SAP, Oracle, biometric devices, and billing machines.</span></div>
+            <div class="timeline-bullet"><i class="fas fa-check-circle"></i><span>Improved application performance via query optimization, eager loading, indexing, pagination, caching, and chunking.</span></div>
+            <div class="timeline-bullet"><i class="fas fa-check-circle"></i><span>Troubleshot and resolved Laravel/PHP application errors, database issues, API failures, and integration problems in production environments.</span></div>
+            <div class="timeline-bullet"><i class="fas fa-check-circle"></i><span>Managed source code using Git, GitHub/GitLab — branching, merging, conflict resolution, and collaborative development workflows.</span></div>
+          </div>
+          <div class="timeline-skills">
+            <span class="timeline-skill">Laravel</span><span class="timeline-skill">PHP</span>
+            <span class="timeline-skill">MySQL</span><span class="timeline-skill">JavaScript</span>
+            <span class="timeline-skill">AJAX</span><span class="timeline-skill">Bootstrap</span>
+            <span class="timeline-skill">Blade</span><span class="timeline-skill">GitHub</span>
+            <span class="timeline-skill">Postman</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Process Associate -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <div class="timeline-role">Process Associate</div>
+            <span class="timeline-date">&#128197; Dec 2019 &ndash; Dec 2020</span>
+          </div>
+          <div class="timeline-company"><i class="fas fa-building" style="margin-right:.4rem;"></i>B2C Technology</div>
+          <div class="timeline-bullets">
+            <div class="timeline-bullet"><i class="fas fa-check-circle"></i><span>Managed business process operations according to defined organizational procedures and quality requirements.</span></div>
+            <div class="timeline-bullet"><i class="fas fa-check-circle"></i><span>Processed and maintained operational data with accuracy and attention to detail.</span></div>
+            <div class="timeline-bullet"><i class="fas fa-check-circle"></i><span>Handled day-to-day process activities, issue resolution, and coordination with internal teams.</span></div>
+          </div>
+          <div class="timeline-skills">
+            <span class="timeline-skill">Business Operations</span>
+            <span class="timeline-skill">Data Management</span>
+            <span class="timeline-skill">Process Coordination</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════ EDUCATION ═══ -->
+<section id="education" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="reveal">
+        <div class="section-label"><i class="fas fa-graduation-cap"></i> Academic</div>
+        <h2 class="section-title">Education &amp; <span>Certifications</span></h2>
+      </div>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card reveal">
+        <div class="edu-icon degree"><i class="fas fa-university"></i></div>
+        <div>
+          <div class="edu-degree">B.E. &ndash; Electronics &amp; Communication Engineering</div>
+          <div class="edu-institute">PET Engineering College</div>
+          <div class="edu-meta">Anna University &middot; Tamil Nadu, India &middot; Completed: 2019</div>
+        </div>
+      </div>
+      <div class="edu-card reveal">
+        <div class="edu-icon cert"><i class="fas fa-certificate"></i></div>
+        <div>
+          <div class="edu-degree">Selenium + Java Automation Testing</div>
+          <div class="edu-institute">Automation Testing Certification</div>
+          <div class="edu-meta">Selenium &middot; Java &middot; Test Automation</div>
+        </div>
+      </div>
+      <div class="edu-card reveal">
+        <div class="edu-icon lang"><i class="fas fa-language"></i></div>
+        <div>
+          <div class="edu-degree">Languages</div>
+          <div class="edu-institute">English &amp; Tamil</div>
+          <div class="edu-meta">Professional proficiency in English &middot; Native Tamil speaker</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════ PROCESS ═══ -->
+<section id="process" class="section" style="background:var(--navy-800);">
+  <div class="container">
+    <div class="section-header center">
+      <div class="reveal">
+        <div class="section-label"><i class="fas fa-sitemap"></i> How I Work</div>
+        <h2 class="section-title">My Development <span>Process</span></h2>
+        <p class="section-desc">A structured, collaborative approach to delivering reliable web applications that meet your real business needs.</p>
+      </div>
+    </div>
+    <div class="process-grid">
+      <div class="process-step reveal"><span class="process-num">01</span><div class="process-icon"><i class="fas fa-search"></i></div><h3>Understand Requirements</h3><p>Understand your business, goals, users, and requirements.</p></div>
+      <div class="process-step reveal"><span class="process-num">02</span><div class="process-icon"><i class="fas fa-drafting-compass"></i></div><h3>Plan the Solution</h3><p>Define application structure, features, database design, and tech stack.</p></div>
+      <div class="process-step reveal"><span class="process-num">03</span><div class="process-icon"><i class="fas fa-code"></i></div><h3>Development</h3><p>Build backend APIs, frontend, and integrations with clean code.</p></div>
+      <div class="process-step reveal"><span class="process-num">04</span><div class="process-icon"><i class="fas fa-vial"></i></div><h3>Testing</h3><p>Test functionality, APIs, edge cases, and application behavior.</p></div>
+      <div class="process-step reveal"><span class="process-num">05</span><div class="process-icon"><i class="fas fa-rocket"></i></div><h3>Deployment</h3><p>Deploy on Linux servers with proper environment configuration.</p></div>
+      <div class="process-step reveal"><span class="process-num">06</span><div class="process-icon"><i class="fas fa-life-ring"></i></div><h3>Support &amp; Growth</h3><p>Ongoing maintenance, bug fixes, and feature development.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════ WHY HIRE ME ═══ -->
+<section id="why" class="section">
+  <div class="container">
+    <div class="section-header center">
+      <div class="reveal">
+        <div class="section-label"><i class="fas fa-star"></i> Value Proposition</div>
+        <h2 class="section-title">Why <span>Hire Me?</span></h2>
+        <p class="section-desc">What you get when you choose me for your next project or full-time role.</p>
+      </div>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="why-num">01</div><h3>Senior-Level Laravel Experience</h3><p>5 years 10 months of PHP/Laravel experience at Senior level — not just a beginner or intermediate.</p></div>
+      <div class="why-card reveal"><div class="why-num">02</div><h3>Full-Stack Capability</h3><p>Backend APIs, frontend integration, database design, Linux deployment — I cover the entire stack.</p></div>
+      <div class="why-card reveal"><div class="why-num">03</div><h3>Complex Integration Experience</h3><p>Proven experience integrating biometric devices, payment systems, kiosks, SAP, Oracle, and hardware APIs.</p></div>
+      <div class="why-card reveal"><div class="why-num">04</div><h3>Real Business Domain Knowledge</h3><p>Worked across HRM, e-commerce, school management, payment, visitor management — I understand business workflows.</p></div>
+      <div class="why-card reveal"><div class="why-num">05</div><h3>Performance &amp; Production Expertise</h3><p>Query optimization, caching, eager loading, production debugging, and Linux server management.</p></div>
+      <div class="why-card reveal"><div class="why-num">06</div><h3>International Project Experience</h3><p>Delivered projects for clients in India and Oman — comfortable with remote and cross-border requirements.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════ RESUME CTA ═══ -->
+<section id="resume-cta">
+  <div class="container">
+    <div class="resume-inner reveal">
+      <div class="resume-text">
+        <div class="section-label" style="margin-bottom:1rem;"><i class="fas fa-file-alt"></i> Resume</div>
+        <h2>Looking for a <span class="gradient-text">Senior Laravel Developer?</span></h2>
+        <p style="margin-top:.8rem;">I am open to full-time Senior Laravel/PHP development opportunities and freelance projects. Download my resume or get in touch directly.</p>
+      </div>
+      <div class="resume-cta-btns">
+        <a href="#" class="btn btn-primary" onclick="alert('To download my resume, please contact me at: peeralameen18@gmail.com or +91 8438425770'); return false;">
+          <i class="fas fa-download"></i> Download Resume
+        </a>
+        <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Contact Me</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════ CONTACT ═══ -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="section-header center">
+      <div class="reveal">
+        <div class="section-label"><i class="fas fa-envelope"></i> Get In Touch</div>
+        <h2 class="section-title">Let's <span>Work Together</span></h2>
+        <p class="section-desc">Available for full-time opportunities &amp; freelance projects. Send me a message and I'll get back to you promptly.</p>
+      </div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal-left">
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <div class="contact-info-label">// Email</div>
+            <div class="contact-info-value"><a href="mailto:peeralameen18@gmail.com" style="color:inherit;">peeralameen18@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
+          <div>
+            <div class="contact-info-label">// Phone</div>
+            <div class="contact-info-value"><a href="tel:+918438425770" style="color:inherit;">+91 8438425770</a></div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <div class="contact-info-label">// Location</div>
+            <div class="contact-info-value">Chennai, Tamil Nadu, India</div>
+          </div>
+        </div>
+        <div style="padding:1.5rem;border-radius:var(--radius-md);background:linear-gradient(135deg,rgba(99,102,241,.12),rgba(139,92,246,.08));border:1px solid rgba(99,102,241,.25);">
+          <div style="font-family:var(--font-code);font-size:.76rem;color:var(--accent-primary);margin-bottom:.5rem;">// Availability</div>
+          <p style="font-size:.87rem;">Available for <strong style="color:var(--text-primary);">Full-Time Opportunities</strong> &amp; <strong style="color:var(--text-primary);">Freelance Projects</strong>.<br/>Remote work welcomed worldwide.</p>
+        </div>
+      </div>
+      <div class="contact-form reveal-right">
+        <h3 style="margin-bottom:1.5rem;font-size:1rem;">Send Me a Message</h3>
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group"><label for="contact-name">Name *</label><input type="text" id="contact-name" name="name" placeholder="Your full name" required /></div>
+            <div class="form-group"><label for="contact-email">Email *</label><input type="email" id="contact-email" name="email" placeholder="your@email.com" required /></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="contact-phone">Phone</label><input type="tel" id="contact-phone" name="phone" placeholder="+91 xxxxxxxxxx" /></div>
+            <div class="form-group"><label for="contact-company">Company / Business</label><input type="text" id="contact-company" name="company" placeholder="Your company name" /></div>
+          </div>
+          <div class="form-group">
+            <label for="contact-type">Project Type</label>
+            <select id="contact-type" name="projectType">
+              <option value="">Select type...</option>
+              <option value="full-time">Full-Time Employment Opportunity</option>
+              <option value="freelance-webapp">Freelance &mdash; Custom Web Application</option>
+              <option value="freelance-laravel">Freelance &mdash; Laravel Development</option>
+              <option value="freelance-api">Freelance &mdash; API Development / Integration</option>
+              <option value="freelance-maintenance">Application Maintenance / Enhancement</option>
+              <option value="other">Other / Let's Discuss</option>
+            </select>
+          </div>
+          <div class="form-group"><label for="contact-message">Message *</label><textarea id="contact-message" name="message" placeholder="Tell me about your project, requirements, or opportunity..."></textarea></div>
+          <button type="submit" class="btn btn-primary" id="contact-submit-btn" style="width:100%;justify-content:center;">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle"></i> Thank you! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div style="font-family:var(--font-display);font-weight:800;font-size:1.6rem;background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Alameen</div>
+        <p>Senior Laravel Developer &amp; Full-Stack PHP Developer. Building scalable, business-critical web applications for clients in India and globally.</p>
+        <span class="badge"><i class="fas fa-map-marker-alt"></i> Chennai, Tamil Nadu, India</span>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:peeralameen18@gmail.com"><i class="fas fa-envelope" style="margin-right:.5rem;color:var(--accent-primary);"></i>peeralameen18@gmail.com</a></li>
+          <li><a href="tel:+918438425770"><i class="fas fa-phone" style="margin-right:.5rem;color:var(--accent-primary);"></i>+91 8438425770</a></li>
+          <li><a href="https://github.com/Ameen9598/ameenportfolio" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" style="margin-right:.5rem;color:var(--accent-primary);"></i>GitHub Repository</a></li>
+          <li style="font-size:.83rem;color:var(--text-secondary);"><i class="fas fa-map-marker-alt" style="margin-right:.5rem;color:var(--accent-primary);"></i>Chennai, Tamil Nadu, India</li>
+        </ul>
+        <div style="margin-top:1.5rem;"><a href="#contact" class="btn btn-primary btn-sm">Hire Me</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2026 Peer Alameen. All Rights Reserved.</div>
+      <div class="footer-love">Built with <span>&#9829;</span> by Alameen &middot; Senior Laravel Developer</div>
+    </div>
+  </div>
+</footer>
+
+<button id="back-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+  // Theme
+  const root=document.documentElement;
+  const saved=localStorage.getItem('alameen-theme')||'dark';
+  root.setAttribute('data-theme',saved);
+  const themeIcon=document.getElementById('themeIcon');
+  themeIcon.className=saved==='dark'?'fas fa-sun':'fas fa-moon';
+  document.getElementById('themeToggle').addEventListener('click',()=>{
+    const cur=root.getAttribute('data-theme'),next=cur==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);localStorage.setItem('alameen-theme',next);
+    themeIcon.className=next==='dark'?'fas fa-sun':'fas fa-moon';
+  });
+  // Navbar
+  const navbar=document.getElementById('navbar'),backTop=document.getElementById('back-top');
+  window.addEventListener('scroll',()=>{
+    navbar.classList.toggle('scrolled',window.scrollY>50);
+    backTop.classList.toggle('show',window.scrollY>400);
+    highlightNav();
+  },{passive:true});
+  const navLinks=document.querySelectorAll('.nav-links a');
+  const sections=document.querySelectorAll('section[id]');
+  function highlightNav(){
+    let cur='';
+    sections.forEach(s=>{if(window.scrollY>=s.offsetTop-150)cur=s.id;});
+    navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur));
+  }
+  // Mobile menu
+  const hamburger=document.getElementById('hamburger'),mobileMenu=document.getElementById('mobileMenu');
+  hamburger.addEventListener('click',()=>{
+    hamburger.classList.toggle('open');mobileMenu.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded',mobileMenu.classList.contains('open'));
+  });
+  document.querySelectorAll('.mobile-link').forEach(l=>l.addEventListener('click',()=>{
+    hamburger.classList.remove('open');mobileMenu.classList.remove('open');
+  }));
+  // Back to top
+  backTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+  // Scroll reveal
+  const obs=new IntersectionObserver((entries)=>{
+    entries.forEach((e,i)=>{
+      if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*70);obs.unobserve(e.target);}
+    });
+  },{threshold:0.07});
+  document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>obs.observe(el));
+  // Contact form
+  document.getElementById('contactForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    const name=document.getElementById('contact-name').value.trim();
+    const email=document.getElementById('contact-email').value.trim();
+    const message=document.getElementById('contact-message').value.trim();
+    const btn=document.getElementById('contact-submit-btn');
+    if(!name||!email||!message){alert('Please fill in Name, Email, and Message.');return;}
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){alert('Please enter a valid email address.');return;}
+    btn.innerHTML='<i class="fas fa-spinner fa-spin"></i> Sending...';btn.disabled=true;
+    setTimeout(()=>{
+      document.getElementById('formSuccess').style.display='block';
+      btn.innerHTML='<i class="fas fa-check"></i> Sent!';
+      btn.style.background='linear-gradient(135deg,#10b981,#059669)';
+      this.reset();
+      setTimeout(()=>{
+        btn.innerHTML='<i class="fas fa-paper-plane"></i> Send Message';
+        btn.style.background='';btn.disabled=false;
+        document.getElementById('formSuccess').style.display='none';
+      },5000);
+    },1800);
+  });
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',function(e){
+      const t=document.querySelector(this.getAttribute('href'));
+      if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+    });
+  });
+  // Typing
+  const titles=['Senior Laravel Developer','Full-Stack PHP Developer','REST API Specialist','Business Software Builder','Web Application Developer'];
+  let tIdx=0,cIdx=titles[0].length,deleting=false;
+  const typed=document.getElementById('typed-title');
+  function type(){
+    const cur=titles[tIdx];
+    if(!deleting){
+      typed.textContent=cur.slice(0,++cIdx);
+      if(cIdx===cur.length){deleting=true;setTimeout(type,2200);return;}
+    }else{
+      typed.textContent=cur.slice(0,--cIdx);
+      if(cIdx===0){deleting=false;tIdx=(tIdx+1)%titles.length;}
+    }
+    setTimeout(type,deleting?45:90);
+  }
+  setTimeout(()=>{deleting=true;type();},2000);
+</script>
+</body>
+</html>
