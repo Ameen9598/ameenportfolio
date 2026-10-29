@@ -392,7 +392,7 @@
           <a href="#contact" class="btn btn-primary"><i class="fas fa-rocket"></i> Hire Me</a>
           <a href="#projects" class="btn btn-outline"><i class="fas fa-folder-open"></i> View My Work</a>
           <a href="Ameen_Resume.pdf" class="btn btn-ghost" download="Peer_Alameen_Resume.pdf"><i class="fas fa-download"></i> Resume</a>
-          <a href="https://www.linkedin.com/in/peeralameen/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <!-- <a href="https://www.linkedin.com/in/peeralameen/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost"><i class="fab fa-linkedin"></i> LinkedIn</a> -->
         </div>
         <div class="hero-stats">
           <div>
@@ -1257,12 +1257,30 @@
     e.preventDefault();
     const name=document.getElementById('contact-name').value.trim();
     const email=document.getElementById('contact-email').value.trim();
+    const phone=document.getElementById('contact-phone')?document.getElementById('contact-phone').value.trim():'';
+    const company=document.getElementById('contact-company')?document.getElementById('contact-company').value.trim():'';
+    const typeSelect=document.getElementById('contact-type');
+    const projectType=(typeSelect&&typeSelect.selectedIndex>0)?typeSelect.options[typeSelect.selectedIndex].text:'';
     const message=document.getElementById('contact-message').value.trim();
     const btn=document.getElementById('contact-submit-btn');
+
     if(!name||!email||!message){alert('Please fill in Name, Email, and Message.');return;}
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){alert('Please enter a valid email address.');return;}
+
     btn.innerHTML='<i class="fas fa-spinner fa-spin"></i> Sending...';btn.disabled=true;
+
+    let waText = '👋 Hi Alameen,\n\nI visited your portfolio and would like to connect!\n\n' +
+      '👤 Name: ' + name + '\n' +
+      '📧 Email: ' + email + '\n';
+    if(phone) waText += '📞 Phone: ' + phone + '\n';
+    if(company) waText += '🏢 Company: ' + company + '\n';
+    if(projectType) waText += '💼 Project Type: ' + projectType + '\n';
+    waText += '\n💬 Message:\n' + message;
+
+    const waUrl = 'https://wa.me/918438425770?text=' + encodeURIComponent(waText);
+
     setTimeout(()=>{
+      window.open(waUrl, '_blank');
       document.getElementById('formSuccess').style.display='block';
       btn.innerHTML='<i class="fas fa-check"></i> Sent!';
       btn.style.background='linear-gradient(135deg,#10b981,#059669)';
@@ -1272,7 +1290,7 @@
         btn.style.background='';btn.disabled=false;
         document.getElementById('formSuccess').style.display='none';
       },5000);
-    },1800);
+    },800);
   });
   // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(a=>{
