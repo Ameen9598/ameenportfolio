@@ -289,6 +289,16 @@
     #back-top{position:fixed;bottom:2rem;right:2rem;z-index:900;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));color:#fff;font-size:1rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px var(--accent-glow);opacity:0;pointer-events:none;transition:var(--transition);cursor:pointer}
     #back-top.show{opacity:1;pointer-events:all}
     #back-top:hover{transform:translateY(-3px)}
+
+    /* Pulsing Green Status */
+    .pulse-dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#10b981;margin-right:.55rem;box-shadow:0 0 0 0 rgba(16,185,129,0.7);animation:pulseDot 1.8s infinite;vertical-align:middle}
+    @keyframes pulseDot{0%{transform:scale(0.95);box-shadow:0 0 0 0 rgba(16,185,129,0.7)}70%{transform:scale(1.15);box-shadow:0 0 0 8px rgba(16,185,129,0)}100%{transform:scale(0.95);box-shadow:0 0 0 0 rgba(16,185,129,0)}}
+
+    /* Floating WhatsApp Quick Chat */
+    #floating-chat{position:fixed;bottom:2rem;left:2rem;z-index:950;display:flex;align-items:center;gap:.6rem;padding:.7rem 1.15rem;background:#25D366;color:#fff;border-radius:100px;font-family:var(--font-body);font-size:.86rem;font-weight:600;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.45);transition:all .25s ease}
+    #floating-chat i{font-size:1.2rem}
+    #floating-chat:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 8px 25px rgba(37,211,102,.65);color:#fff}
+    @media(max-width:600px){#floating-chat span{display:none}#floating-chat{padding:.8rem;border-radius:50%;bottom:1.5rem;left:1.5rem}}
     .section-divider{height:1px;background:linear-gradient(to right,transparent,var(--border-subtle),transparent)}
 
     /* RESPONSIVE */
@@ -320,6 +330,30 @@
       .footer-bottom{flex-direction:column;text-align:center}
     }
   </style>
+  <!-- Google Search Console & SEO Structured Data -->
+  <meta property="og:title" content="Peer Alameen | Mid-Level Laravel Developer" />
+  <meta property="og:description" content="Mid-Level Laravel Developer with 3+ years experience building scalable web applications, REST APIs, and business systems." />
+  <meta property="og:type" content="website" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Peer Alameen",
+    "jobTitle": "Mid-Level Laravel Developer",
+    "url": "https://github.com/Ameen9598/ameenportfolio",
+    "sameAs": [
+      "https://www.linkedin.com/in/peeralameen/",
+      "https://github.com/Ameen9598/ameenportfolio"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Nagercoil",
+      "addressRegion": "Tamil Nadu",
+      "addressCountry": "India"
+    },
+    "knowsAbout": ["PHP", "Laravel", "MySQL", "REST APIs", "Livewire", "JavaScript", "Software Architecture"]
+  }
+  </script>
 </head>
 <body>
 
@@ -376,7 +410,7 @@
   <div class="container">
     <div class="hero-inner">
       <div>
-        <div class="hero-availability">Open to Full-Time &amp; Freelance Projects</div>
+        <div class="hero-availability"><span class="pulse-dot"></span>Available for Immediate Joining &amp; Freelance</div>
         <h1 class="hero-name">
           Peer <span class="gradient-text">Alameen</span>
         </h1>
@@ -396,11 +430,11 @@
         </div>
         <div class="hero-stats">
           <div>
-            <div class="hero-stat-value">3+</div>
+            <div class="hero-stat-value count-up" data-target="3" data-suffix="+">3+</div>
             <div class="hero-stat-label">Yrs Experience</div>
           </div>
           <div>
-            <div class="hero-stat-value">6</div>
+            <div class="hero-stat-value count-up" data-target="6" data-suffix="">6</div>
             <div class="hero-stat-label">Real Projects</div>
           </div>
           <div>
@@ -464,7 +498,7 @@
           requirement-driven application development.
         </p>
         <div class="about-stats-row">
-          <div class="about-stat-card"><div class="val">3+</div><div class="lbl">Yrs Experience</div></div>
+          <div class="about-stat-card"><div class="val count-up" data-target="3" data-suffix="+">3+</div><div class="lbl">Yrs Experience</div></div>
           <div class="about-stat-card"><div class="val">Mid</div><div class="lbl">Level Developer</div></div>
           <div class="about-stat-card"><div class="val">Full-Stack</div><div class="lbl">Development</div></div>
           <div class="about-stat-card"><div class="val">IN &amp; OM</div><div class="lbl">India &amp; Oman Projects</div></div>
@@ -1207,6 +1241,10 @@
 </footer>
 
 <button id="back-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+<a href="https://wa.me/918438425770?text=Hi%20Alameen%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect!" target="_blank" rel="noopener noreferrer" id="floating-chat" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+  <span>Quick Chat</span>
+</a>
 
 <script>
   // Theme
@@ -1316,6 +1354,33 @@
       document.getElementById('formSuccess').style.display='none';
     },5000);
   });
+    // Lightweight Vanilla Count-Up Animation (0ms load overhead)
+  const countObs = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.getAttribute('data-target'), 10);
+        const suffix = el.getAttribute('data-suffix') || '';
+        if(!isNaN(target)) {
+          let current = 0;
+          el.textContent = '0' + suffix;
+          const step = Math.max(1, Math.ceil(target / 15));
+          const timer = setInterval(() => {
+            current += step;
+            if(current >= target) {
+              el.textContent = target + suffix;
+              clearInterval(timer);
+            } else {
+              el.textContent = current + suffix;
+            }
+          }, 60);
+        }
+        obs.unobserve(el);
+      }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.count-up').forEach(el => countObs.observe(el));
+
   // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(a=>{
     a.addEventListener('click',function(e){
