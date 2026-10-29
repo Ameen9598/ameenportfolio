@@ -1252,8 +1252,11 @@
     });
   },{threshold:0.07});
   document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>obs.observe(el));
-  // Contact form
-  document.getElementById('contactForm').addEventListener('submit',function(e){
+  // Contact form - Direct Background Email & WhatsApp Bot
+  // To activate WhatsApp Bot: Send "I allow callmebot to send me messages" to +34 644 44 20 89 on WhatsApp, then put your API key below:
+  const CALLMEBOT_API_KEY = ''; // e.g. '1234567'
+
+  document.getElementById('contactForm').addEventListener('submit', function(e){
     e.preventDefault();
     const name=document.getElementById('contact-name').value.trim();
     const email=document.getElementById('contact-email').value.trim();
@@ -1269,28 +1272,43 @@
 
     btn.innerHTML='<i class="fas fa-spinner fa-spin"></i> Sending...';btn.disabled=true;
 
-    let waText = '👋 Hi Alameen,\n\nI visited your portfolio and would like to connect!\n\n' +
-      '👤 Name: ' + name + '\n' +
-      '📧 Email: ' + email + '\n';
-    if(phone) waText += '📞 Phone: ' + phone + '\n';
-    if(company) waText += '🏢 Company: ' + company + '\n';
-    if(projectType) waText += '💼 Project Type: ' + projectType + '\n';
-    waText += '\n💬 Message:\n' + message;
+    // 1. Send Direct Email via FormSubmit AJAX (Background - No popup)
+    const emailPromise = fetch("https://formsubmit.co/ajax/peeralameen18@gmail.com", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        phone: phone || 'N/A',
+        company: company || 'N/A',
+        projectType: projectType || 'General Inquiry',
+        message: message,
+        _subject: "🚀 New Portfolio Message from " + name,
+        _template: "table"
+      })
+    }).catch(err => console.log('Email delivery note:', err));
 
-    const waUrl = 'https://wa.me/918438425770?text=' + encodeURIComponent(waText);
+    // 2. Send Background WhatsApp via CallMeBot (if API Key provided)
+    if(CALLMEBOT_API_KEY && CALLMEBOT_API_KEY !== '') {
+      const botMsg = `*New Portfolio Message!*\n👤 Name: ${name}\n📧 Email: ${email}\n📞 Phone: ${phone || '-'}\n💼 Type: ${projectType || '-'}\n💬 Message:\n${message}`;
+      fetch(`https://api.callmebot.com/whatsapp.php?phone=918438425770&text=${encodeURIComponent(botMsg)}&apikey=${CALLMEBOT_API_KEY}`, { mode: 'no-cors' }).catch(err => console.log('Bot note:', err));
+    }
 
+    // Handle UI feedback
     setTimeout(()=>{
-      window.open(waUrl, '_blank');
       document.getElementById('formSuccess').style.display='block';
       btn.innerHTML='<i class="fas fa-check"></i> Sent!';
       btn.style.background='linear-gradient(135deg,#10b981,#059669)';
-      this.reset();
+      document.getElementById('contactForm').reset();
       setTimeout(()=>{
         btn.innerHTML='<i class="fas fa-paper-plane"></i> Send Message';
         btn.style.background='';btn.disabled=false;
         document.getElementById('formSuccess').style.display='none';
       },5000);
-    },800);
+    },1200);
   });
   // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(a=>{
