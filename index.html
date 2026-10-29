@@ -91,11 +91,13 @@
     .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
     .hamburger.open span:nth-child(2){opacity:0}
     .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-    .mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;bottom:0;background:rgba(8,13,26,.97);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;z-index:999}
-    [data-theme="light"] .mobile-menu{background:rgba(240,244,255,.97)}
-    .mobile-menu.open{display:flex}
-    .mobile-menu a{font-family:var(--font-display);font-size:1.4rem;font-weight:600;color:var(--text-primary);transition:var(--transition);padding:.5rem 2rem}
-    .mobile-menu a:hover{color:var(--accent-primary)}
+    .mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;bottom:0;background:rgba(8,13,26,.98);backdrop-filter:blur(25px);-webkit-backdrop-filter:blur(25px);flex-direction:column;align-items:center;justify-content:flex-start;gap:.55rem;z-index:999;padding:1.6rem 1.4rem 2.5rem;overflow-y:auto;opacity:0;transform:translateY(-8px);transition:opacity .25s ease,transform .25s ease}
+    [data-theme="light"] .mobile-menu{background:rgba(240,244,255,.98)}
+    .mobile-menu.open{display:flex;opacity:1;transform:translateY(0)}
+    .mobile-link{width:100%;max-width:340px;display:flex;align-items:center;gap:.9rem;padding:.72rem 1.15rem;border-radius:var(--radius-md);background:var(--surface-glass);border:1px solid var(--border-subtle);font-family:var(--font-display);font-size:1rem;font-weight:600;color:var(--text-primary);transition:var(--transition);text-decoration:none}
+    .mobile-link i{width:22px;text-align:center;font-size:1rem;color:var(--accent-primary);flex-shrink:0}
+    .mobile-link:hover,.mobile-link:active{background:rgba(99,102,241,.12);border-color:var(--border-accent);color:var(--accent-primary);transform:translateX(4px)}
+    .mobile-cta{width:100%;max-width:340px;margin-top:.8rem}
 
     /* HERO */
     #hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:80px}
@@ -313,6 +315,7 @@
     @media(max-width:768px){
       .section{padding:70px 0}
       .nav-links,.nav-right .btn{display:none}
+      .nav-right{gap:.5rem}
       .hamburger{display:flex}
       .hero-cta{flex-direction:column}
       .hero-cta .btn{justify-content:center}
@@ -392,15 +395,21 @@
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#hero" class="mobile-link">Home</a>
-  <a href="#about" class="mobile-link">About</a>
-  <a href="#skills" class="mobile-link">Skills</a>
-  <a href="#services" class="mobile-link">Services</a>
-  <a href="#projects" class="mobile-link">Projects</a>
-  <a href="#experience" class="mobile-link">Experience</a>
-  <a href="#education" class="mobile-link">Education</a>
-  <a href="#contact" class="mobile-link">Contact</a>
-  <a href="#contact" class="btn btn-primary" style="margin-top:1rem;">Hire Me</a>
+  <a href="#hero" class="mobile-link"><i class="fas fa-home"></i> <span>Home</span></a>
+  <a href="#about" class="mobile-link"><i class="fas fa-user"></i> <span>About</span></a>
+  <a href="#skills" class="mobile-link"><i class="fas fa-code"></i> <span>Skills</span></a>
+  <a href="#services" class="mobile-link"><i class="fas fa-laptop-code"></i> <span>Services</span></a>
+  <a href="#projects" class="mobile-link"><i class="fas fa-folder-open"></i> <span>Projects</span></a>
+  <a href="#experience" class="mobile-link"><i class="fas fa-history"></i> <span>Experience</span></a>
+  <a href="#education" class="mobile-link"><i class="fas fa-graduation-cap"></i> <span>Education</span></a>
+  <a href="#contact" class="mobile-link"><i class="fas fa-envelope"></i> <span>Contact</span></a>
+  <div class="mobile-cta">
+    <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:.6rem;"><i class="fas fa-rocket"></i> Hire Me</a>
+    <div style="display:flex;gap:.7rem;width:100%;">
+      <a href="Ameen_Resume.pdf" download="Peer_Alameen_Resume.pdf" class="btn btn-outline" style="flex:1;justify-content:center;font-size:.82rem;padding:.6rem;"><i class="fas fa-download"></i> Resume</a>
+      <a href="https://www.linkedin.com/in/peeralameen/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" style="flex:1;justify-content:center;font-size:.82rem;padding:.6rem;"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+  </div>
 </div>
 
 <!-- ═══════════════════════════════════════ HERO ═══ -->
@@ -410,7 +419,7 @@
   <div class="container">
     <div class="hero-inner">
       <div>
-        <div class="hero-availability"><span class="pulse-dot"></span>Available for Immediate Joining &amp; Freelance</div>
+        <div class="hero-availability">Available for Immediate Joining &amp; Freelance</div>
         <h1 class="hero-name">
           Peer <span class="gradient-text">Alameen</span>
         </h1>
@@ -483,7 +492,7 @@
         <p style="margin-bottom:1rem;">
           I am <strong>Peer Alameen</strong>, a Mid-Level Laravel Developer with
           <strong>3+ years of professional PHP/Laravel experience</strong> and
-          6 years 10 months of total professional experience. I specialize in backend and
+          3 years 10 months of total professional experience. I specialize in backend and
           full-stack feature development using PHP, Laravel, MySQL, REST APIs, Livewire,
           JavaScript, jQuery, AJAX, and Bootstrap.
         </p>
